@@ -1,0 +1,57 @@
+# ============================================================
+#  .gitignore raíz — Emojis MQTT (monorepo)
+#
+#  Cubre los dos proyectos del repositorio:
+#    - web/              : React + JavaScript + Vite (Node.js)
+#    - microcontrolador/ : PlatformIO + Arduino + ESP32
+#
+#  (Cada subproyecto mantiene además su propio .gitignore,
+#   por si se abre de forma independiente.)
+# ============================================================
+
+# ---------- Sistema operativo / editor ----------
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+.idea/
+*.iml
+*.log
+
+# ---------- Node.js / aplicación web (web/) ----------
+# Dependencias
+node_modules/
+
+# Build de producción
+dist/
+dist-ssr/
+.vite/
+
+# Cobertura y cachés de tests
+coverage/
+.eslintcache
+.cache/
+
+# Variables de entorno (no subir secretos)
+.env
+.env.*
+!.env.example
+
+# Logs de gestores de paquetes
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ---------- PlatformIO / microcontrolador (microcontrolador/) ----------
+# Entorno de compilación de PlatformIO
+.pio/
+
+# Configuración local de Visual Studio Code / IDE
+.vscode/
+
+# Base de datos de compilación generada
+compile_commands.json
